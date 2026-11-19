@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conectando…</title>
+<style>body{font-family:system-ui,sans-serif;background:#0e0f13;color:#eee;display:grid;place-items:center;height:100vh;margin:0;text-align:center}a{color:#a970ff}</style>
+</head>
+<body>
+<div>
+  <h2>Conectando ao app no seu computador…</h2>
+  <p>Se nada acontecer, verifique se o app está aberto e <a id="link" href="#">clique aqui</a>.</p>
+</div>
+<script>
+  // Repassa o código de autorização do TikTok para o app que roda no computador do usuário.
+  // Esta página não guarda nem envia dados para nenhum outro lugar.
+  var destino = "http://127.0.0.1:8770/tiktok/callback" + window.location.search;
+  document.getElementById("link").href = destino;
+  window.location.replace(destino);
+</script>
+</body>
+</html>
